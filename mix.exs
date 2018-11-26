@@ -19,6 +19,7 @@ defmodule FindYourSetlist.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
+      applications: [:httpotion],
       mod: {FindYourSetlist.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
@@ -41,8 +42,10 @@ defmodule FindYourSetlist.MixProject do
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
-      {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:jason, "~> 1.1"},
+      {:plug_cowboy, "~> 2.0"},
+      {:floki, "~> 0.20.0"},
+      {:httpotion, "~> 3.1.0"},
     ]
   end
 
