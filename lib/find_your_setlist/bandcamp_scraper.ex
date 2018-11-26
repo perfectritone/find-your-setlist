@@ -7,4 +7,8 @@ defmodule BandcampScraper do
     |> Map.put(:path, "/music")
     |> URI.to_string()
   end
+
+  def page_body(url) do
+    HTTPotion.get!(url).body
+  end
 end
