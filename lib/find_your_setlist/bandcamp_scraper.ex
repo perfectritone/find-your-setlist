@@ -11,4 +11,10 @@ defmodule BandcampScraper do
   def page_body(url) do
     HTTPotion.get!(url).body
   end
+
+  def extract_sets(html) do
+    Floki.find(html, "ol.music-grid")
+    |> Floki.attribute("data-initial-values")
+    |> Enum.map(&Jason.decode(&1))
+  end
 end
