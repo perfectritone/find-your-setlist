@@ -19,9 +19,8 @@ defmodule FindYourSetlist.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      applications: [:httpotion],
       mod: {FindYourSetlist.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpotion],
     ]
   end
 
